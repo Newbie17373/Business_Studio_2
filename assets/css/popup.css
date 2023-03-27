@@ -1,0 +1,226 @@
+.popup__order,
+.popup__consultation,
+.popup__authorization,
+.popup__registration,
+.popup__reviews {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  opacity: 0%;
+  visibility: collapse;
+}
+
+.popup__order.visible,
+.popup__consultation.visible,
+.popup__authorization.visible,
+.popup__registration.visible,
+.popup__reviews.visible {
+  opacity: 100%;
+  visibility: visible;
+  transition: all 0.25s linear 0s;
+}
+
+.popup__registration.visible {
+  transition: all 0s linear 0s;
+}
+
+.popup__authorization-inside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.599);
+  cursor: pointer;
+}
+
+.popup__authorization-form,
+.popup__reviews-form {
+  z-index: 8;
+  background: #fff;
+  width: calc(620 / 1920 * 100%);
+  height: fit-content;
+  padding: 36px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 5px;
+  gap: 16px;
+  position: relative;
+  font-family: "Playfair Display", sans-serif;
+}
+
+@media (max-width: 992px) {
+  .popup__authorization-form,
+  .popup__reviews-form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup__authorization-form,
+  .popup__reviews-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup__authorization-form,
+  .popup__reviews-form {
+    width: 100%;
+  }
+}
+
+.popup__reviews-form {
+  width: calc(820 / 1920 * 100%);
+}
+
+@media (max-width: 768px) {
+  .popup__reviews-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup__reviews-form {
+    width: 100%;
+  }
+}
+
+.popup__reviews-textarea {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+.popup__authorization-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  z-index: 7;
+  font-size: 20px;
+  height: 26px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup__authorization-close:hover {
+  background-color: #5451ff4b;
+  color: rgb(214, 40, 40);
+}
+
+.popup__authorization-close:after {
+  content: "X";
+  font-family: "Inter", sans-serif;
+}
+
+.popup__authorization-login-google {
+  border: 3px solid #000;
+  width: 100%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.285rem;
+  transition: transform 0.2s linear 0s;
+  cursor: pointer;
+}
+
+.popup__authorization-text {
+  color: #666;
+  font-family: "Inter", sans-serif;
+}
+
+.popup-hover:hover {
+  transform: translateY(-1.5px);
+  transition: transform 0.25s linear 0s;
+}
+
+.popup__authorization-email {
+  border: 3px solid #000;
+  border-radius: 8px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.285rem;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.popup__menu {
+}
+
+.popup__authorization-password {
+  border: 3px solid #000;
+  border-radius: 8px;
+  height: 48px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.285rem;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.popup__authorization-login {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  border: 3px solid #000;
+  height: 48px;
+  font-weight: 700;
+  font-size: 1.056rem;
+  line-height: 1.285rem;
+  width: 100%;
+  padding: 0 20px;
+  transition: transform 0.2s linear 0s;
+  cursor: pointer;
+}
+
+.popup__authorization-sign-in-and-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.popup__authorization-pass-recover span {
+  color: #5551ff;
+  cursor: pointer;
+}
+
+.popup__authorization-button-registration span,
+.popup__registration-button-authorization span {
+  color: #5551ff;
+  cursor: pointer;
+}
+
+.popup__authorization-button-registration:hover,
+.popup__authorization-pass-recover:hover > span,
+.popup__registration-button-authorization:hover {
+  text-decoration: 1px solid underline #5551ff;
+}
